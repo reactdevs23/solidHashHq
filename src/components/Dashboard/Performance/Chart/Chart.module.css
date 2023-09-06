@@ -1,0 +1,93 @@
+.chartContainer {
+  background: #fff;
+  box-shadow: 0px 8px 14px 0px rgba(14, 19, 79, 0.1);
+  padding-right: 10px;
+  border-radius: 12px;
+  padding-top: 15px;
+}
+.myChart {
+  transform: translateY(4px);
+}
+.chartHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-left: 15px;
+}
+.chartTitle {
+  color: rgba(60, 64, 114, 0.7);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 142.857%;
+}
+
+.chartTabContainer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.chartTab {
+  color: #6a6d95;
+
+  /* Caption/12 */
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 133.333%;
+  letter-spacing: 0.2px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.circle {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #e0e5ed;
+}
+.activeChartTab .circle {
+  border: 3px solid #2f39bf;
+}
+.customTooltip {
+  background: rgba(23, 41, 89, 0.53);
+  backdrop-filter: blur(5px);
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.date {
+  color: #fff;
+  text-align: center;
+  font-family: Inter !important;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 133.333%;
+  letter-spacing: 0.2px;
+}
+.amount {
+  color: #fff;
+  text-align: center;
+  font-family: Inter !important;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+@media only screen and (max-width: 450px) {
+  .chartContainer {
+    padding-right: 10px;
+    transform: translate();
+  }
+
+  .chartHeader {
+    flex-direction: column;
+  }
+}

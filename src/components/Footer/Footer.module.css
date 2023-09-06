@@ -1,0 +1,57 @@
+.footerWrapper {
+  margin-top: 0;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 20px 25px;
+  padding-top: 40px;
+  margin-top: auto;
+}
+.loginFooter {
+  padding: 20px 0px;
+  margin-top: auto;
+}
+.footerItems {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.text {
+  color: #979ab7;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.857%;
+}
+
+@media only screen and (max-width: 767px) {
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .loginFooter {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .footerItems {
+    justify-content: center;
+    gap: 4px;
+  }
+  .footerItem {
+    padding: 0 12px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .loginFooter {
+    flex-direction: column;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,250 @@
+.loginWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+.loginContainerAndFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.loginContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  height: 100%;
+}
+.formContainer {
+  max-width: 552px;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 20px;
+  border: 1px solid rgba(169, 172, 204, 0.24);
+  background: var(--others-white, #fff);
+  box-shadow: 0px 14px 20px -8px rgba(60, 64, 114, 0.06);
+  padding: 40px 24px;
+}
+.formContainer,
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.logo {
+  width: 27px;
+}
+.logoText {
+  color: rgba(14, 19, 79, 0.8);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+.heading {
+  color: rgba(14, 19, 79, 0.8);
+  text-align: center;
+  font-family: Inter;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0.2px;
+}
+
+.loginWithButton,
+.loginButton {
+  color: #3c4072;
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 114.286%;
+  letter-spacing: 0.3px;
+  padding: 13px 24px;
+  border-radius: 12px;
+  background: #eef0fa;
+  border: none;
+  outline: none;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.icon {
+  color: rgba(61, 106, 214, 1);
+  font-size: 24px;
+}
+.orSignUpWith {
+  color: #979ab7;
+  text-align: center;
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.2px;
+
+  position: relative;
+}
+
+.orSignUpWith::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 38%;
+  height: 1px;
+  background-color: #e9ebed;
+}
+.orSignUpWith::before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 38%;
+  height: 1px;
+  background-color: #e9ebed;
+}
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.label {
+  color: rgba(60, 64, 114, 0.8);
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 166.667%;
+  letter-spacing: 0.2px;
+}
+.inputContainer {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  border-radius: 12px;
+  background: #eef0fa;
+  padding: 0px 10px;
+  padding-left: 5px;
+}
+.passwordContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.iconAndInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.iconContainer {
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 0px 8px 12px 0px rgba(14, 19, 79, 0.08);
+  padding: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 18px;
+}
+.showPasswordIcon {
+  font-size: 24px;
+  cursor: pointer;
+
+  color: rgba(151, 154, 183, 1);
+}
+.input {
+  color: #3c4072;
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 230.769%;
+  letter-spacing: 0.2px;
+  padding: 8px 10px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.loginButton {
+  border-radius: 12px;
+  background: #dcddec;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.doNotHaveAccount {
+  color: rgba(60, 64, 114, 0.8);
+  font-family: Inter;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 142.857%;
+  letter-spacing: 0.2px;
+}
+.signUp {
+  opacity: 0.8;
+  color: #2f39bf;
+
+  font-size: 16px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.image {
+  width: 100%;
+  max-height: 100vh;
+  min-height: 100vh;
+  object-fit: cover;
+  object-position: top;
+}
+.footercontainer {
+  max-width: 552px;
+  width: 90%;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 991px) {
+  .loginWrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .formContainer,
+  .footercontainer {
+    width: 95%;
+  }
+  .image {
+    display: none;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .formContainer {
+    padding: 30px 15px;
+  }
+}

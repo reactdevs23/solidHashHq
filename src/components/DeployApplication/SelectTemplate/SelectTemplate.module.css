@@ -1,0 +1,130 @@
+.titleAndTagline {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.title {
+  color: rgba(60, 64, 114, 0.8);
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 166.667%;
+  letter-spacing: 0.2px;
+}
+.tagline {
+  color: rgba(148, 150, 176, 0.8);
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 166.667%;
+  letter-spacing: 0.2px;
+}
+.labelAndwrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  gap: 6px;
+}
+
+.label {
+  color: rgba(60, 64, 114, 0.8);
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 166.667%;
+  letter-spacing: 0.2px;
+  position: relative;
+}
+.label::after {
+  content: "*";
+
+  color: rgba(227, 32, 32, 0.8);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 114.286%;
+  position: absolute;
+  top: 60%;
+  right: -15px;
+  transform: translateY(-50%);
+}
+.nameAndPrice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.templates {
+  position: relative;
+}
+.templates:before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(
+    270deg,
+    #fff 1.43%,
+    rgba(255, 255, 255, 0) 94.29%
+  );
+  width: 50px;
+  height: 100%;
+  right: -15px;
+  z-index: 1;
+  opacity: 0.7;
+}
+.mySlider {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.slide {
+  padding: 0 10px;
+}
+.template {
+  border-radius: 12px;
+  background: #eef0fa;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+.selectedTemplate {
+  border: 2px solid #2f39bf;
+}
+.templateImg {
+  border-radius: 12px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.7;
+}
+.selectedTemplate .templateImg {
+  opacity: 1;
+}
+.name,
+.price {
+  color: #979ab7;
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  text-transform: capitalize;
+}
+.selectedTemplate .name,
+.selectedTemplate .price {
+  color: #2f39bf;
+}
+@media only screen and (max-width: 1280px) {
+  .template {
+    padding: 12px;
+    gap: 15px;
+  }
+}

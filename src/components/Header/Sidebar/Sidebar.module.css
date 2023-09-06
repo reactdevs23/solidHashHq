@@ -1,0 +1,168 @@
+.sidebar {
+  position: fixed;
+  left: 0px;
+  top: 83px;
+  background: #fff;
+  border-left: 1px solid rgba(169, 172, 204, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+
+  padding-bottom: 20px;
+  max-width: 245px;
+  width: 100%;
+  min-height: calc(100vh - 83px);
+  z-index: 5;
+}
+.navContainer {
+  border-bottom: 1px solid rgba(220, 221, 236, 0.8);
+  padding: 30px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.navHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px;
+
+  background: #eef0fa;
+  padding: 14px 15px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.activeNavHeader {
+  background: #e1e3f7;
+  opacity: 1;
+}
+
+.navHeadingAndIcon {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.navHeading {
+  color: #6a6d95;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 142.857%;
+}
+.activeNavHeader .navHeading {
+  color: #2f39bf;
+}
+.navIcon {
+  color: rgba(106, 109, 149, 1);
+}
+.activeNavHeader .navIcon {
+  color: rgba(47, 57, 191, 1);
+}
+.arrow {
+  color: rgba(106, 109, 149, 1);
+}
+.navItemsWrapper,
+.navItems {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 25px 18px;
+}
+.navItemsWrapper {
+  padding-bottom: 0;
+}
+.myNav {
+  position: relative;
+}
+.myNav::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 70%;
+  background: #c5c7da;
+  top: -50%;
+  left: 0;
+  transform: translateX(-50%);
+}
+.myNav::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #c5c7da;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+.navActive::before,
+.navActive::after {
+  background: #2f39bf;
+}
+.navItems {
+  padding: 30px 18px;
+  border-bottom: 1px solid rgba(220, 221, 236, 0.8);
+}
+
+.navIcon {
+  color: rgba(106, 109, 149, 1);
+  font-size: 18px;
+  line-height: 133.333%;
+}
+.navItem {
+  color: #6a6d95;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 0.2px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 12px;
+}
+.navActive {
+  color: #2f39bf;
+}
+.navActive .navIcon {
+  color: #2f39bf;
+}
+.logoutButton {
+  color: rgba(106, 109, 149, 0.9);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.857%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-top: auto;
+  padding: 10px 18px;
+}
+.logoutIcon {
+  color: rgba(151, 154, 183, 1);
+  font-size: 24px;
+}
+
+@media only screen and (max-width: 1280px) {
+  .sidebar {
+    transform: translateX(-150%);
+    transition: 0.3s;
+    left: 0;
+    top: 0;
+    min-height: 100vh;
+  }
+  .showSidebar {
+    transform: translateX(0%);
+
+    transition: 0.3s;
+  }
+}

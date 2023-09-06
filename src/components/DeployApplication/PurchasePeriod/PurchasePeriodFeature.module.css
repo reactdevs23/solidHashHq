@@ -1,0 +1,153 @@
+.wrapper {
+  padding: 10px;
+  border-radius: 20px;
+  background: #dcddec;
+}
+.periodAndFeature {
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 0px 8px 14px 0px rgba(14, 19, 79, 0.1);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.label {
+  color: rgba(60, 64, 114, 0.8);
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 166.667%;
+  letter-spacing: 0.2px;
+  padding-bottom: 6px;
+}
+
+.purchasePeriodContainer {
+}
+.periodContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(169, 172, 204, 0.14);
+  background: #eef0fa;
+  padding: 8px;
+}
+.purchasePeriod {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 8px 12px 0px rgba(14, 19, 79, 0.08);
+  padding: 15px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+.selectedPurchasePeriod {
+  border-radius: 8px;
+  border: 2px solid #2f39bf;
+  background: #fff;
+  box-shadow: 0px 8px 12px 0px rgba(14, 19, 79, 0.08);
+}
+.price {
+  color: #0e134f;
+  font-kerning: none;
+  font-feature-settings: "calt" off;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+}
+
+.period {
+  color: #0e134f;
+  font-kerning: none;
+  font-feature-settings: "calt" off;
+  font-family: Inter;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 111.111%;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+}
+.selectedPurchasePeriod .price,
+.selectedPurchasePeriod .period {
+  color: #2f39bf;
+}
+.enableBackupContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.backupContainer {
+  border-radius: 12px;
+  background: #eaecf9;
+  border: 2px solid transparent;
+  padding: 6px;
+}
+.selectedBackupContainer {
+  border: 2px solid #2f39bf;
+}
+.backup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.selectedBackupContainer .backup {
+  background: #fff;
+  box-shadow: 0px 8px 14px 0px rgba(14, 19, 79, 0.1);
+}
+.checkboxAndTitle {
+  display: flex;
+  align-items: center;
+}
+.backupTitle,
+.backupPrice {
+  color: #0e134f;
+  font-feature-settings: "case" on, "cv11" on, "cv10" on, "cv09" on, "cv08" on,
+    "cv02" on, "salt" on, "ss03" on, "cv06" on, "cv07" on, "ss04" on, "ss02" on,
+    "cv05" on, "ss01" on, "cv04" on, "cv03" on, "cv01" on;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 133.333%;
+  letter-spacing: 0.2px;
+  text-transform: capitalize;
+}
+
+.backupPrice {
+  opacity: 0.5;
+  text-align: right;
+}
+.selectedBackupContainer .backupPrice {
+  opacity: 1;
+}
+.launchButton {
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.3px;
+  border-radius: 12px;
+  background: #2f39bf;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 15px;
+  width: 100%;
+}

@@ -1,0 +1,100 @@
+.keyValue {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 0 14px;
+  border-bottom: 1px dashed rgba(106, 109, 149, 0.2);
+  padding: 15px 0;
+}
+.firstKeyValue {
+  padding-top: 0;
+}
+.keyValue:last-child {
+  border: none;
+}
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.label {
+  color: #979ab7;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 133.333%;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  display: none;
+}
+.input {
+  color: #3c4072;
+
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 230.769%;
+  letter-spacing: 0.2px;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 6px 12px;
+
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 6px 12px 0px rgba(14, 19, 79, 0.04);
+  border: none;
+  outline: none;
+}
+.deleteContainer {
+  background: rgba(205, 208, 241, 0.6);
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.deleteIcon {
+  color: rgba(106, 109, 149, 1);
+  font-size: 22px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 575px) {
+  .keyValue {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    align-items: end;
+    padding: 25px 0;
+  }
+  .firstKeyValue {
+    padding-top: 0;
+  }
+  .label {
+    display: block;
+  }
+  .input {
+    padding: 6px 12px;
+  }
+  .deleteContainer {
+    width: 33px;
+    height: 33px;
+
+    margin-left: auto;
+
+    margin-bottom: -10px;
+  }
+
+  .deleteIcon {
+    font-size: 20px;
+  }
+}

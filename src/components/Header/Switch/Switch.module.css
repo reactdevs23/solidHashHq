@@ -1,0 +1,40 @@
+.wrapper {
+  border-radius: 26px;
+  border: 1px solid var(--greyscale-50, #eceff4);
+  background: #f3f4fd;
+  display: flex;
+  align-content: center;
+  gap: 5px;
+  padding: 4px;
+}
+
+.iconContainer {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  cursor: pointer;
+}
+.icon {
+  font-size: 22px;
+  color: rgba(150, 160, 181, 1);
+}
+.active {
+  background: #fff;
+  filter: drop-shadow(0px 6px 10px rgba(14, 19, 79, 0.12));
+}
+.active .icon {
+  color: rgba(47, 57, 191, 0.8);
+}
+@media only screen and (max-width: 767px) {
+  .iconContainer {
+    width: 28px;
+    height: 28px;
+  }
+  .icon {
+    font-size: 20px;
+  }
+}

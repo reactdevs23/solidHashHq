@@ -1,0 +1,279 @@
+.headerWrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  border: 1px solid rgba(169, 172, 204, 0.2);
+  background: #fff;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 18px;
+  padding-left: 0;
+}
+.logoContainer {
+  width: 245px;
+  padding: 28px 0;
+  display: flex;
+
+  align-items: center;
+  gap: 5px;
+  border-right: 1px solid rgba(169, 172, 204, 0.2);
+
+  padding-left: 18px;
+}
+.logo {
+  width: 24px;
+}
+.logoText {
+  color: #062046;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+.switchAndInfoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding-left: 20px;
+}
+.infoContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.iconContainer {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #eaecf9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+.activeNotification {
+  background: #2f39bf;
+  position: relative;
+}
+.activeNotification::after {
+  content: " ";
+  width: 9px;
+  height: 9px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: #e94d4d;
+  position: absolute;
+  top: -4px;
+  right: -4px;
+}
+.notificationIcon {
+  font-size: 25px;
+  color: rgba(106, 109, 149, 1);
+  opacity: 0.8;
+}
+.activeNotification .notificationIcon {
+  color: rgba(255, 255, 255, 1);
+}
+
+.userContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-radius: 12px;
+  background: #eaecf9;
+  padding: 8px 12px;
+  position: relative;
+}
+.arrowContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #fff;
+}
+.arrow {
+  color: #000;
+  font-size: 18px;
+  cursor: pointer;
+  color: rgba(106, 109, 149, 1);
+  color: rgba(106, 109, 149, 1);
+  opacity: 0.8;
+}
+.userNameAndWallet {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 3px;
+}
+.userName {
+  color: #0e134f;
+  text-align: right;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 114.286%;
+  letter-spacing: 0.4px;
+}
+.wallet {
+  color: #6a6d95;
+  text-align: right;
+  font-family: Inter;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 118.182%;
+  letter-spacing: 0.2px;
+}
+
+.userProfile {
+  border-radius: 8px;
+  border: 4px solid #fff;
+  background: #07bc8c;
+  box-shadow: 0px 6px 10px 0px rgba(14, 19, 79, 0.12);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.user {
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 128.571%;
+}
+
+.dropDown {
+  position: absolute;
+  min-width: 100%;
+  top: 60px;
+  left: 0;
+  padding: 12px;
+
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+.logoutButton {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  background: transparent;
+  color: #000;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+  color: #000;
+}
+.mobileSwitch {
+  display: none;
+}
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(109, 111, 130, 0.4);
+  backdrop-filter: blur(4px);
+}
+@media only screen and (max-width: 1199px) {
+  .logoContainer {
+    border: none;
+  }
+  .switchAndInfoContainer {
+    justify-content: flex-end;
+  }
+  .hamburger {
+    display: block;
+    font-size: 36px;
+
+    cursor: pointer;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    width: 94%;
+    margin: 0 auto;
+    padding: 20px 0px;
+    gap: 15px;
+  }
+  .logoAndSwitch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .logoContainer {
+    padding: 0;
+
+    width: 100%;
+  }
+  .switchAndInfoContainer {
+    padding: 0;
+  }
+  .infoContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .userContainer {
+    padding: 5px 6px;
+    position: relative;
+    padding-left: 9px;
+  }
+  .userName,
+  .user {
+    font-size: 13px;
+  }
+  .userProfile {
+    width: 29px;
+    height: 29px;
+  }
+  .hamburger {
+    font-size: 34px;
+  }
+  .iconContainer {
+    width: 40px;
+    height: 40px;
+  }
+  .notificationIcon {
+    font-size: 22px;
+  }
+  .dekstopSwitch {
+    display: none;
+  }
+  .mobileSwitch {
+    display: block;
+  }
+}

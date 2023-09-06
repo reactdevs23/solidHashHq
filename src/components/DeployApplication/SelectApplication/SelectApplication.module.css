@@ -1,0 +1,175 @@
+.selectApplication {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.labelAndwrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 6px;
+}
+
+.label {
+  color: rgba(60, 64, 114, 0.8);
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 166.667%;
+  letter-spacing: 0.2px;
+  position: relative;
+}
+.label::after {
+  content: "*";
+
+  color: rgba(227, 32, 32, 0.8);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 114.286%;
+  position: absolute;
+  top: 60%;
+  right: -15px;
+  transform: translateY(-50%);
+}
+.inputContainer {
+  border-radius: 12px;
+  background: #eef0fa;
+  display: flex;
+  align-items: center;
+
+  border-radius: 12px;
+  background: #eef0fa;
+  padding: 8px;
+}
+.iconContainer {
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 0px 8px 12px 0px rgba(14, 19, 79, 0.08);
+  padding: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 18px;
+}
+.input {
+  color: #3c4072;
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 230.769%;
+  letter-spacing: 0.2px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0 10px;
+}
+.appAndVersion {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+.hostingSelectionContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+.hostingSelection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 8px;
+  border-radius: 12px;
+  background: #eef0fa;
+  cursor: pointer;
+  border: 2px solid #eef0fa;
+}
+.selectedHosting {
+  border: 2px solid #2f39bf;
+}
+.hostingProviderName {
+  color: #979ab7;
+  text-align: center;
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+.logoContainer {
+  padding: 0px 8px;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoSize {
+  height: 25px;
+}
+.selectedHosting .hostingProviderName {
+  color: #2f39bf;
+}
+.selectedHosting .logoContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 0px 8px 12px 0px rgba(14, 19, 79, 0.08);
+}
+@media only screen and (max-width: 991px) {
+  .appAndVersion {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .hostingSelectionContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hostingSelection:last-child {
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .hostingSelectionContainer {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .hostingSelectionContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .hostingSelection:last-child {
+    grid-column: auto;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .hostingSelectionContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .hostingSelection:last-child {
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .hostingSelectionContainer {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}

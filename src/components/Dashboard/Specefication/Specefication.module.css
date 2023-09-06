@@ -1,0 +1,104 @@
+.speceficationContainer {
+  /* border-radius: 22px; */
+  display: flex;
+  align-items: center;
+
+  overflow-x: auto;
+
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 0px 8px 14px 0px rgba(14, 19, 79, 0.1);
+  padding: 14px 15px;
+  width: 100%;
+}
+.tableContainer {
+  /* border-radius: 22px; */
+  padding-bottom: 5px;
+  overflow-x: auto;
+}
+
+.table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+.whatBoxContainer {
+  display: flex;
+  justify-content: flex-start;
+}
+.whatBox {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: #eaecf9;
+}
+.whatIcon {
+  color: rgba(106, 109, 149, 0.8);
+  font-size: 22px;
+}
+
+.titleAndInfo {
+  text-align: left;
+  padding: 6px 30px;
+  border-right: 1px solid rgba(166, 167, 191, 0.4);
+}
+.titleAndInfo:last-child {
+  border: none;
+}
+
+/* .titleAndInfo:nth-child(2) {
+  text-align: left;
+  align-items: flex-start;
+} */
+.title {
+  color: rgba(106, 109, 149, 0.6);
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+.info {
+  color: rgba(106, 109, 149, 0.9);
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.052px;
+  white-space: nowrap;
+  padding-top: 5px;
+}
+@media only screen and (max-width: 1455px) {
+  .titleAndInfo {
+    padding: 0 28px;
+  }
+}
+/* Firefox */
+.speceficationContainer {
+  scrollbar-width: thin;
+  scrollbar-color: #2f39bf rgba(250, 250, 250, 0.2);
+  border-radius: 5px;
+}
+
+/* Chrome, Edge, and Safari */
+.speceficationContainer::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 5px;
+}
+
+.speceficationContainer::-webkit-scrollbar-track {
+  background: rgba(250, 250, 250, 0.2);
+  border-radius: 5px;
+}
+
+.speceficationContainer::-webkit-scrollbar-thumb {
+  background: #2f39bf;
+  border-radius: 100vh;
+  border: none;
+  border-radius: 5px;
+}

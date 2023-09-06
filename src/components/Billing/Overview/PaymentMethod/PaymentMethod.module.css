@@ -1,0 +1,137 @@
+.wrapper {
+  border-radius: 20px;
+  border: 1px solid rgba(169, 172, 204, 0.24);
+  background: #fff;
+  box-shadow: 0px 14px 20px -8px rgba(60, 64, 114, 0.06);
+  padding: 20px;
+  width: 100%;
+  max-width: 360px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.heading {
+  color: rgba(60, 64, 114, 0.8);
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 133.333%;
+  letter-spacing: 0.2px;
+}
+.settingsContainer {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: #eaecf9;
+  cursor: pointer;
+}
+.settingsIcon {
+  font-size: 18px;
+  color: rgba(106, 109, 149, 0.8);
+}
+.cardContainer {
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(220, 221, 236, 0.8);
+}
+.cardImg {
+  width: 100%;
+  border-radius: 12px;
+}
+.iconContainer {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: #eaecf9;
+  cursor: pointer;
+}
+.icon {
+  font-size: 20px;
+  color: rgba(106, 109, 149, 0.8);
+}
+.informationContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 18px;
+  padding-bottom: 5px;
+}
+
+.row {
+  display: flex;
+  align-items: start;
+  gap: 15px;
+}
+.iconTitleAndDetails {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.titleAndDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.title {
+  color: rgba(106, 109, 149, 0.6);
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.2px;
+}
+.details {
+  color: rgba(60, 64, 114, 0.8);
+  font-variant-numeric: lining-nums tabular-nums;
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.copyIconContainer {
+  cursor: pointer;
+  margin-left: auto;
+  position: relative;
+}
+.copied::after {
+  content: "Copy";
+  font-size: 12px;
+  font-family: Inter;
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #d3d4d9;
+  padding: 3px 5px;
+  border-radius: 4px;
+}
+.copyIcon {
+  width: 22px;
+}
+@media only screen and (max-width: 1460px) {
+  .wrapper {
+    padding: 14px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+}

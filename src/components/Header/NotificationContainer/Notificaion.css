@@ -1,0 +1,18 @@
+.greenHighlight {
+  color: #058d69;
+}
+.blackHiglight {
+  color: rgba(14, 19, 79, 0.8);
+}
+.blueHighlight {
+  color: #194bfb;
+}
+.hightlight {
+  color: rgba(14, 19, 79, 0.8);
+}
+.required::before {
+  content: "*";
+  color: rgba(227, 32, 32, 0.8);
+  position: absolute;
+  right: -12px;
+}

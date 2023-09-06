@@ -1,0 +1,65 @@
+.peroFormanceContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.header {
+  border-radius: 12px;
+  background: #fff;
+  padding: 12px;
+  filter: drop-shadow(0px 8px 14px rgba(14, 19, 79, 0.1));
+}
+.header,
+.performanceBox {
+  border-radius: 12px;
+  background: #fff;
+  filter: drop-shadow(0px 8px 14px rgba(14, 19, 79, 0.1));
+}
+.header {
+  display: grid;
+  grid-template-columns: 170px 110px 1fr;
+  align-items: center;
+  gap: 8px;
+}
+.button {
+  color: #534702;
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 114.286%;
+  letter-spacing: 0.3px;
+  border-radius: 10px;
+  background: #fdf0a1;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 16px 12px;
+}
+.restartButton {
+  color: rgba(83, 71, 2, 1);
+  background: #fdf0a1;
+}
+.enableFlexibleIp {
+  color: #2f39bf;
+  background: #e1e3f7;
+}
+@media only screen and (max-width: 1080px) {
+  .header {
+    grid-template-columns: 180px 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .header {
+    grid-template-columns: 180px 1fr;
+  }
+  .enableFlexibleIp {
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .header {
+  }
+}

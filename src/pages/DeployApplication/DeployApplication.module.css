@@ -1,0 +1,38 @@
+.container {
+  position: relative;
+  padding-right: calc(360px + 15px);
+}
+.myPurchaseAndFeature {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 360px;
+}
+.dashBoard {
+  border-radius: 20px;
+  border: 1px solid rgba(169, 172, 204, 0.24);
+  background: #fff;
+}
+@media only screen and (max-width: 1080px) {
+  .container {
+    padding-right: calc(320px + 15px);
+  }
+  .myPurchaseAndFeature {
+    width: 320px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .container {
+    padding-right: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 25px;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .myPurchaseAndFeature {
+    position: static;
+    width: 100%;
+  }
+}
