@@ -223,12 +223,17 @@
   max-height: 100vh;
   min-height: 100vh;
   object-fit: cover;
-  object-position: top;
+  object-position: 0 20%;
 }
 .footercontainer {
   max-width: 552px;
   width: 90%;
   margin: 0 auto;
+}
+@media only screen and (max-width: 1450px) {
+  .image {
+    object-position: top;
+  }
 }
 @media only screen and (max-width: 991px) {
   .loginWrapper {

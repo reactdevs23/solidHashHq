@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useNvigate } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebookF } from "react-icons/fa";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 import { lock, loginImage, logo, mail } from "../../images/images";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import styles from "./Login.module.css";
 
@@ -11,9 +11,12 @@ const Login = () => {
   const [email, setEamil] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
   const submitHandler = (e) => {
     e.preventDefault();
+    navigate("/");
   };
+
   return (
     <div className={styles.loginWrapper}>
       <div className={styles.loginContainerAndFooter}>
