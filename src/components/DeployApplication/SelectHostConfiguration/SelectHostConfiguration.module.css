@@ -98,7 +98,7 @@
 }
 .selectedHosting .firstItem::before {
   width: calc(100% - 8px);
-  height: calc(100% - 10px);
+  height: calc(100% - 12px);
   right: 0;
   left: auto;
   transform: translate(0, -50%);
