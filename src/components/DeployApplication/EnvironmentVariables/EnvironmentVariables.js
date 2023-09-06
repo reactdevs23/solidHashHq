@@ -64,6 +64,22 @@ const EnvironmentVariables = () => {
       },
     },
   ]);
+  const createNewKey = () => {
+    const newInput = {
+      key: {
+        type: "text",
+        name: `key${inputs.length + 1}`,
+        placeholder: "e.g. CLIENT_KEY",
+      },
+      value: {
+        type: "text",
+        name: `value${inputs.length + 1}`,
+        placeholder: "Input your Value...",
+      },
+    };
+
+    setInputs((prevInputs) => [...prevInputs, newInput]);
+  };
   const onChange = (e) => {
     const { name, value } = e.target;
     setValues((prevValues) => ({
@@ -81,7 +97,7 @@ const EnvironmentVariables = () => {
   };
   return (
     <StepWrapper
-      heading="Step 3 :   Select Template"
+      heading="Step 4 :   Environment Variables"
       isOpen={isOpen}
       setIsOpen={setIsOpen}
     >
@@ -113,7 +129,7 @@ const EnvironmentVariables = () => {
             />
           ))}
         </div>{" "}
-        <button className={styles.createNewKey}>
+        <button className={styles.createNewKey} onClick={createNewKey}>
           {" "}
           <AiOutlinePlus className={styles.plusIcon} /> Create New KEY
         </button>

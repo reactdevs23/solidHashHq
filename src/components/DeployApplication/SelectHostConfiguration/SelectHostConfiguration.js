@@ -84,6 +84,13 @@ const SelectHostConfiguration = () => {
       },
     },
   ];
+  const handleSelection = (id) => {
+    if (selected) {
+      setSelected(null);
+    } else {
+      setSelected(id);
+    }
+  };
   return (
     <StepWrapper
       heading="Step 5 : Select Host Configuration"
@@ -114,17 +121,19 @@ const SelectHostConfiguration = () => {
             </tr>
             {hostConfigurationData.map((el, i) => (
               <tr
+                key={i}
                 className={[
                   styles.row,
                   selected === i && styles.selectedHosting,
                 ].join(" ")}
-                key={i}
+                onClick={() => setSelected(i)}
               >
                 <td className={[styles.firstItemContainer].join(" ")}>
                   <div className={[styles.item, styles.firstItem].join(" ")}>
                     <CheckBox
                       id={i}
                       checked={selected === i}
+                      handleClick={handleSelection}
                       setChecked={setSelected}
                     />
                   </div>

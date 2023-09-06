@@ -16,7 +16,7 @@
   font-weight: 600;
   line-height: 114.286%;
   letter-spacing: 0.3px;
-  padding: 8px 10px;
+  padding: 8px 8px;
   cursor: pointer;
   white-space: nowrap;
 }
@@ -25,4 +25,16 @@
   background: var(--others-white, #fff);
   box-shadow: 0px 6px 10px 0px rgba(14, 19, 79, 0.12);
   color: #058d69;
+}
+.deActiveBox {
+  border-radius: 8px;
+  background: var(--others-white, #fff);
+  box-shadow: 0px 6px 10px 0px rgba(14, 19, 79, 0.12);
+  color: #e32020;
+}
+.turnOn:hover {
+  color: #058d69;
+}
+.turnOff:hover {
+  color: #e32020;
 }

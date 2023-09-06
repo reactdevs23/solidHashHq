@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import styles from "./DropDown.module.css";
 
-//showDropdown, setShowDropDown, data
-
 const DropDown = ({ showDropdown, setShowDropDown, label, data }) => {
   const [activeItem, setActiveItem] = useState(data[0]);
   return (
@@ -12,7 +10,16 @@ const DropDown = ({ showDropdown, setShowDropDown, label, data }) => {
         {" "}
         <label className={styles.label}>{label}</label>
       </p>
-      <div className={styles.dropdown}>
+      <div
+        className={styles.dropdown}
+        onClick={() => {
+          if (showDropdown) {
+            setShowDropDown(false);
+          } else {
+            setShowDropDown(true);
+          }
+        }}
+      >
         <div className={styles.nameAndIcon}>
           <div className={styles.iconContainer}>
             <img
@@ -27,10 +34,11 @@ const DropDown = ({ showDropdown, setShowDropDown, label, data }) => {
           </p>
         </div>
         <div className={styles.arrowContainer}>
-          <IoIosArrowUp
-            className={[styles.arrow].join(" ")}
-            onClick={() => setShowDropDown((prev) => !prev)}
-          />
+          {showDropdown ? (
+            <IoIosArrowUp className={[styles.arrow].join(" ")} />
+          ) : (
+            <IoIosArrowDown className={[styles.arrow].join(" ")} />
+          )}
         </div>
 
         {showDropdown && (
@@ -41,6 +49,7 @@ const DropDown = ({ showDropdown, setShowDropDown, label, data }) => {
                 className={styles.dropdownItem}
                 onClick={() => {
                   setActiveItem(el);
+
                   setShowDropDown(false);
                 }}
               >

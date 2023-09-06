@@ -43,6 +43,7 @@
   background: #eef0fa;
   padding: 8px;
   position: relative;
+  cursor: pointer;
 }
 
 .nameAndIcon {

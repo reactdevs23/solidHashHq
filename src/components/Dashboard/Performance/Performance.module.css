@@ -18,7 +18,7 @@
 }
 .header {
   display: grid;
-  grid-template-columns: 170px 110px 1fr;
+  grid-template-columns: auto 110px 1fr;
   align-items: center;
   gap: 8px;
 }
@@ -37,23 +37,33 @@
   outline: none;
   cursor: pointer;
   padding: 16px 12px;
+  transition: 0.3s;
 }
 .restartButton {
-  color: rgba(83, 71, 2, 1);
-  background: #fdf0a1;
+  background: rgb(253, 240, 161);
+  color: rgb(56, 48, 3);
+}
+.restartButton:hover {
+  background: rgb(233, 220, 121);
+  color: rgb(56, 48, 3);
 }
 .enableFlexibleIp {
   color: #2f39bf;
   background: #e1e3f7;
 }
+.enableFlexibleIp:hover {
+  color: #404080;
+  background: #c1c3f7;
+}
+
 @media only screen and (max-width: 1080px) {
   .header {
-    grid-template-columns: 180px 1fr 1fr;
+    grid-template-columns: auto 1fr 1fr;
   }
 }
 @media only screen and (max-width: 767px) {
   .header {
-    grid-template-columns: 180px 1fr;
+    grid-template-columns: auto 1fr;
   }
   .enableFlexibleIp {
     grid-column: 1/-1;

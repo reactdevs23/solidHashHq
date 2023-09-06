@@ -50,6 +50,9 @@
   border-spacing: 0;
   width: 100%;
 }
+.row {
+  cursor: pointer;
+}
 
 .heading,
 .item {

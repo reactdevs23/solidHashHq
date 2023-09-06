@@ -1,0 +1,48 @@
+.backupContainer {
+  border-radius: 12px;
+  background: #eaecf9;
+  border: 2px solid transparent;
+  padding: 6px;
+  cursor: pointer;
+}
+.selectedBackupContainer {
+  border: 2px solid #2f39bf;
+}
+.backup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.selectedBackupContainer .backup {
+  background: #fff;
+  box-shadow: 0px 8px 14px 0px rgba(14, 19, 79, 0.1);
+}
+.checkboxAndTitle {
+  display: flex;
+  align-items: center;
+}
+.backupTitle,
+.backupPrice {
+  color: #0e134f;
+  font-feature-settings: "case" on, "cv11" on, "cv10" on, "cv09" on, "cv08" on,
+    "cv02" on, "salt" on, "ss03" on, "cv06" on, "cv07" on, "ss04" on, "ss02" on,
+    "cv05" on, "ss01" on, "cv04" on, "cv03" on, "cv01" on;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 133.333%;
+  letter-spacing: 0.2px;
+  text-transform: capitalize;
+}
+
+.backupPrice {
+  opacity: 0.5;
+  text-align: right;
+}
+.selectedBackupContainer .backupPrice {
+  opacity: 1;
+}

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import styles from "./PurchasePeriodFeature.module.css";
 import CheckBox from "./Checkbox/Checkbox";
+import Feature from "./Feature/Feature";
 
 const PurchasePeriodFeature = () => {
   const [selectedPeriod, setSelectedPeriod] = useState("monthly");
-  const [checked, setChecked] = useState(0);
 
   const backups = {
     monthly: [
@@ -45,7 +45,7 @@ const PurchasePeriodFeature = () => {
               onClick={() => setSelectedPeriod("yearly")}
             >
               <p className={styles.price}>$380</p>
-              <p className={styles.period}>Monthly</p>
+              <p className={styles.period}>Yearly</p>
             </div>
           </div>
         </div>
@@ -54,25 +54,7 @@ const PurchasePeriodFeature = () => {
 
           <div className={styles.enableBackupContainer}>
             {backups[selectedPeriod].map((el, backupId) => (
-              <div
-                className={[
-                  styles.backupContainer,
-                  checked === backupId && styles.selectedBackupContainer,
-                ].join(" ")}
-                key={backupId}
-              >
-                <div className={[styles.backup].join(" ")}>
-                  <div className={styles.checkboxAndTitle}>
-                    <CheckBox
-                      id={backupId}
-                      checked={checked === backupId}
-                      setChecked={setChecked}
-                    />
-                    <p className={styles.backupTitle}>{el.title}</p>
-                  </div>
-                  <p className={styles.backupPrice}>+{el.price} </p>
-                </div>
-              </div>
+              <Feature {...el} backupId={backupId} />
             ))}
           </div>
         </div>
