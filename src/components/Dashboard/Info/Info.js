@@ -8,7 +8,7 @@ import SemicircularProgressBar from "./SemiCircleProgressBar/SemiCircleProgressB
 const Info = () => {
   const data = {
     progressInfo: [
-      { progress: 1, title: "Processor (CPU)", info: "1X3.3 GHz" },
+      { progress: 48, title: "Processor (CPU)", info: "1X3.3 GHz" },
       {
         progress: 92,
         title: "Memory (RAM)",
