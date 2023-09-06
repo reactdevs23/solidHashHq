@@ -199,6 +199,11 @@
   background: #dcddec;
   padding-top: 16px;
   padding-bottom: 16px;
+  transition: 0.3s;
+}
+.loginButton:hover {
+  background: #2f39bf;
+  color: #fff;
 }
 .doNotHaveAccount {
   color: rgba(60, 64, 114, 0.8);
