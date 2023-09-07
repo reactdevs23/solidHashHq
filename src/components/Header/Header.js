@@ -8,9 +8,10 @@ import Switch from "./Switch/Switch";
 import Sidebar from "./Sidebar/Sidebar";
 import NotificationContainer from "./NotificationContainer/NotificationContainer";
 import styles from "./Header.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
   const [sidebar, setSidebar] = useState(false);
   const [dropDown, setDropDown] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
@@ -80,7 +81,10 @@ const Header = () => {
                   <div className={styles.dropDown}>
                     <button
                       className={styles.logoutButton}
-                      onClick={() => setDropDown((prev) => !prev)}
+                      onClick={() => {
+                        setDropDown((prev) => !prev);
+                        navigate("/login");
+                      }}
                     >
                       Logout
                     </button>

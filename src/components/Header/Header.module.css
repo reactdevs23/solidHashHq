@@ -167,13 +167,16 @@
 
 .dropDown {
   position: absolute;
+  z-index: 1;
   min-width: 100%;
-  top: 60px;
+  top: 50px;
   left: 0;
+
   padding: 12px;
 
   border: 2px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
+  background: #eaecf9;
 }
 .logoutButton {
   font-family: "Inter";
@@ -182,10 +185,11 @@
   font-size: 16px;
   line-height: 120%;
   background: transparent;
-  color: #000;
+  color: #6a6d95;
   border: none;
   outline: none;
   cursor: pointer;
+  border-radius: 12px;
 }
 
 .hamburger {
