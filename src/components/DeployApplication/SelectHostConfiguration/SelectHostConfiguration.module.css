@@ -189,7 +189,7 @@
 
 /* Chrome, Edge, and Safari */
 .tableContainer::-webkit-scrollbar {
-  height: 3px;
+  height: 5px;
   border-radius: 5px;
 }
 
